@@ -1,0 +1,124 @@
+<!doctype html>
+<html lang="en">
+
+	<head>
+		<meta charset="utf-8"/>
+		<title></title>
+	
+		<!--[if lt IE 9]>
+			<script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+		<![endif]-->
+		
+		<link rel="stylesheet" media="all" href="styles/layout.css" type="text/css"/>
+		<link rel="stylesheet" media="all" href="styles/styles.css" type="text/css"/>
+		<link rel='stylesheet' media="all" href='http://fonts.googleapis.com/css?family=Cantarell:regular,italic,bold,bolditalic' type='text/css'/>
+		<meta name="viewport" content="width=device-width; initial-scale=1"/>
+		
+		<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.4.4/jquery.min.js"></script>
+		<script type="text/javascript">
+		toggleSiteMenu = function() {
+            if ($('#__int-toggle-site-menu').hasClass('inactive')) {
+                // Show the menu
+                $('#__int-toggle-site-menu').removeClass('inactive');
+                $('#__int-toggle-site-menu').addClass('active');
+                $('#__site-menu ul').slideDown('slow', function() {
+                    $('#__int-toggle-site-menu').html('Hide Menu');
+                });
+            } else {
+                // Hide the menu
+                $('#__site-menu ul').slideUp('slow', function() {
+                    $('#__int-toggle-site-menu').removeClass('active');
+                    $('#__int-toggle-site-menu').addClass('inactive');
+                    $('#__int-toggle-site-menu').html('Site Menu');
+                });
+            }
+		}
+		togglePageMenu = function() {
+		    if ($('#__int-toggle-page-menu').hasClass('inactive')) {
+                // Show the menu
+                $('#__int-toggle-page-menu').removeClass('inactive');
+                $('#__int-toggle-page-menu').addClass('active');
+                $('#__page-menu ul').slideDown('slow', function() {
+                    $('#__int-toggle-page-menu').html('Hide Menu');
+                });
+            } else {
+                // Hide the menu
+                $('#__page-menu ul').slideUp('slow', function() {
+                    $('#__int-toggle-page-menu').removeClass('active');
+                    $('#__int-toggle-page-menu').addClass('inactive');
+                    $('#__int-toggle-page-menu').html('Page Menu');
+                });
+            }
+		}
+		$(document).ready(function() {
+            $('#__int-toggle-site-menu').click(toggleSiteMenu);
+            $('#__int-toggle-page-menu').click(togglePageMenu);
+        });
+		</script>
+	</head>
+
+	<body>
+	    <div id="__header">
+	        <div id="__header-bar">
+	            <div id="__banner">
+	                <h3>"We are who we say we are even if we say we aren't who we are."</h3>
+	                <p style="text-align: right;">- John "Awesome Guy" Franks, Founder and CEO</p>
+                </div>
+	            <div id="__site-menu">
+	                <h1>Sweet Company</h1>
+	                <a id="__int-toggle-site-menu" class="inactive">Site Menu</a>
+	                <ul>
+	                    <li><a href="#">Home</a></li>
+	                    <li><a href="#">Search</a></li>
+	                    <li><a href="#">About</a></li>
+	                    <li><a href="#">Contact</a></li>
+	                    <li><a href="#">Help Me</a></li>
+	                    <li><a href="#">More Stuff</a></li>
+	                </ul>
+	                <div style="clear: both; display: block;"></div>
+	            </div>
+	        </div>
+            <div id="__feature">
+                <!--<img src="styles/head1.png" />-->
+            </div>
+	    </div>
+	    <div id="__page-menu">
+	        <a id="__int-toggle-page-menu" class="inactive">Page Menu</a>
+            <ul>
+                <li><a href="#">Edit</a></li>
+                <li><a href="#">Subscribe</a></li>
+                <li><a href="#">Report</a></li>
+                <li><a href="#">Sections</a></li>
+                <li><a href="#">Source</a></li>
+            </ul>
+        </div>
+		<div id="__body">
+		    <div id="__content">
+		        <div class="dokuwiki">
+		            <!-- content -->
+		            <!-- HERE -->
+		            <h2>Welcome</h2>
+		            <p>Lorem ipsum dolor sit amet, nec hac sit convallis dolores aliquet et, sed vivamus ac pellentesque adipiscing nec, id duis. Sapien a nec, nec at, egestas praesent arcu, sed neque odio fames sit maecenas cras, sit wisi hac ut. Nunc turpis nam tempor egestas libero, id wisi a sollicitudin in ante risus, totam est mauris nullam, dui suspendisse et vestibulum blandit, dictumst duis nibh. Venenatis suspendisse lobortis metus sem, sem sapien convallis ut, scelerisque donec morbi vestibulum. Ipsum sociosqu. Elit et nec. Magnis taciti odio quas sed, nec semper in amet, nunc mollis auctor interdum magna molestie, justo ut nostra ipsum lectus volutpat. Iaculis gravida nec sem tincidunt eu, pulvinar lorem senectus tempus fringilla, risus eleifend, ornare diam, montes in vestibulum dolor et egestas.</p>
+		            <p>Here is some preformatted text to test out.</p>
+		            <pre><code>Nunc turpis nam tempor egestas libero, id wisi a sollicitudin in ante risus, totam est mauris nullam, dui suspendisse et vestibulum blandit, dictumst duis nibh.
+Venenatis suspendisse lobortis metus sem, sem sapien convallis ut, scelerisque donec morbi vestibulum. Ipsum sociosqu.
+Elit et nec.</code></pre>
+		            <h3>More Information</h3>
+		            <p>Lorem ipsum dolor sit amet, nec hac sit convallis dolores aliquet et, sed vivamus ac pellentesque adipiscing nec, id duis. Sapien a nec, nec at, egestas praesent arcu, sed neque odio fames sit maecenas cras, sit wisi hac ut. Nunc turpis nam tempor egestas libero, id wisi a sollicitudin in ante risus, totam est mauris nullam, dui suspendisse et vestibulum blandit, dictumst duis nibh. Venenatis suspendisse lobortis metus sem, sem sapien convallis ut, scelerisque donec morbi vestibulum. Ipsum sociosqu. Elit et nec. Magnis taciti odio quas sed, nec semper in amet, nunc mollis auctor interdum magna molestie, justo ut nostra ipsum lectus volutpat. Iaculis gravida nec sem tincidunt eu, pulvinar lorem senectus tempus fringilla, risus eleifend, ornare diam, montes in vestibulum dolor et egestas.</p>
+		            <img src="img/test-image-1.jpg" />
+		            <p>Lectus quis interdum tincidunt at. Elit voluptate, justo scelerisque pellentesque lacus eget viverra quam. Velit integer dignissim amet libero tristique est, curabitur rutrum lacinia, sociosqu id. Odio in accumsan ultricies in amet. Sed a sed augue, lacus posuere leo aptent, ipsum ut lacus a in purus, pharetra quo vestibulum. Vivamus duis porttitor facilisis in luctus. Suspendisse ligula phasellus vitae, in sed porta sodales, lorem vestibulum nec, velit phasellus. At nam, potenti volutpat in, purus curae vel massa euismod nibh hendrerit. Lacinia nec elit sollicitudin facilisis praesent, nulla risus taciti imperdiet ac. Enim accumsan sem vitae urna.</p>
+		            <p>Lorem ipsum dolor sit amet, nec hac sit convallis dolores aliquet et, sed vivamus ac pellentesque adipiscing nec, id duis. Sapien a nec, nec at, egestas praesent arcu, sed neque odio fames sit maecenas cras, sit wisi hac ut. Nunc turpis nam tempor egestas libero, id wisi a sollicitudin in ante risus, totam est mauris nullam, dui suspendisse et vestibulum blandit, dictumst duis nibh. Venenatis suspendisse lobortis metus sem, sem sapien convallis ut, scelerisque donec morbi vestibulum. Ipsum sociosqu. Elit et nec. Magnis taciti odio quas sed, nec semper in amet, nunc mollis auctor interdum magna molestie, justo ut nostra ipsum lectus volutpat. Iaculis gravida nec sem tincidunt eu, pulvinar lorem senectus tempus fringilla, risus eleifend, ornare diam, montes in vestibulum dolor et egestas.</p>
+		        </div>
+		        <div style="clear: both;"></div>
+		    </div>
+		    <!-- info bar -->
+		    <!-- HERE -->
+		</div>
+		
+		<div id="__footer">
+		
+		</div>
+		
+	</body>
+	
+</html>

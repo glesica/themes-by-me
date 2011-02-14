@@ -1,0 +1,41 @@
+#__content p {
+    margin: 24px 0;
+}
+
+#__content ul {
+    margin: 24px 0;
+}
+
+#__content img {
+    margin: 24px auto;
+    padding: 0;
+    
+    width: 100%;
+    max-width: 800px;
+    display: block;
+}
+
+#__content pre {
+    background: url(code_bg.png) repeat-y left top;
+    
+    margin: 24px auto;
+	padding: 0;
+	
+	border: none;
+	border-left: 1px solid #ccc;
+	
+	width: 100%;
+	max-width: 800px;
+	overflow: auto;
+	
+	font-size: 12px;
+	color: #fff;
+	line-height: 20px;
+}
+
+#__content pre code {
+    margin: 0;
+	padding: 20px 0 20px 36px;
+	
+	display: block;
+}

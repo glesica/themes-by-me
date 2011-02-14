@@ -1,0 +1,490 @@
+/*	Less Framework 3
+	by Joni Korpi
+	http://lessframework.com	*/
+
+
+/*	Resets
+	------	*/
+
+html, body, div, span, object, iframe, h1, h2, h3, h4, h5, h6, 
+p, blockquote, pre, a, abbr, address, cite, code, del, dfn, em, 
+img, ins, kbd, q, samp, small, strong, sub, sup, var, b, i, 
+dl, dt, dd, ol, ul, li, fieldset, form, label, legend, 
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, figure, figcaption, hgroup, 
+menu, footer, header, nav, section, summary, time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+}
+
+article, aside, canvas, figure, figure img, figcaption, hgroup,
+footer, header, nav, section, audio, video {
+	display: block;
+}
+
+a img {border: 0;}
+
+figure {position: relative;}
+figure img {width: 100%;}
+
+
+/*	Typography presets
+	------------------	*/
+
+.gigantic {
+	font-size: 110px;
+	line-height: 120px;
+	letter-spacing: -2px;
+}
+
+.huge, h1 {
+	font-size: 68px;
+	line-height: 72px;
+	letter-spacing: -1px;
+}
+
+.large, h2 {
+	font-size: 42px;
+	line-height: 48px;
+}
+
+.big, h3 {
+	font-size: 26px;
+	line-height: 36px;
+}
+
+.normal, body {
+	font: 16px/24px Helvetica, Arial, sans-serif;
+}
+
+.small {
+	font-size: 13px;
+	line-height: 18px;
+} 
+
+
+/*	Default 8-column layout
+	60 px columns, 24 px gutters, 60 px margins, 768 px total
+	---------------------------------------------------------
+	1     2      3      4      5      6      7      8     
+	60px  144px  228px  312px  396px  480px  564px  648px	*/
+
+body {
+	background: rgb(232,232,232);
+	background: #fff;
+	padding: 84px 60px 0;
+	width: 648px;
+	-webkit-tap-highlight-color: rgb(255,255,0);
+	margin: auto;
+	color: #333;
+}
+
+::selection 	 	{background: rgb(255,255,0);}
+::-moz-selection 	{background: rgb(255,255,0);}
+img::selection 		{background: transparent;}
+img::-moz-selection {background: transparent;}
+
+/* MAIN LAYOUT STYLES */
+
+#__header-bar {
+    background: url('head1.png') no-repeat;
+    
+    box-shadow: 2px 2px 5px #aaa;
+    -moz-box-shadow: 2px 2px 5px #aaa;
+    -webkit-box-shadow: 2px 2px 5px #aaa;
+    
+    border-radius: 12px;
+    -moz-border-radius: 12px;
+    -webkit-border-radius: 12px;
+
+    margin-bottom: 12px;
+}
+
+#__banner {
+    padding: 12px 12px 0 12px;
+    
+    /*
+    This style can be toggled to show or hide the banner above the menu bar.
+    */
+    /*display: none;*/
+}
+
+#__site-menu {
+    background: #444;
+    background: -moz-linear-gradient(top, #666, #333);
+    background: -webkit-gradient(linear, left top, left bottom, from(#666), to(#333));
+    
+    border-radius: 12px;
+    -moz-border-radius: 12px;
+    -webkit-border-radius: 12px;
+    
+    padding: 0 12px;
+}
+
+#__site-menu * {
+    display: inline;
+    line-height: 60px;
+}
+
+#__site-menu h1 {
+    background: url(logo-24.png) no-repeat;
+    
+    padding: 0 0 0 36px;
+
+    font-size: 20px;
+    color: #ccc;
+}
+
+#__site-menu li {
+    list-style-type: none;
+}
+
+#__site-menu li a {
+    background: #444;
+    background: -moz-linear-gradient(top, #666, #333);
+    background: -webkit-gradient(linear, left top, left bottom, from(#666), to(#333));
+    
+    padding: 0 10px;
+    height: 60px;
+    
+    border-left: 1px solid rgba(255,255,255,0.10);
+    border-right: 1px solid rgba(0,0,0,0.17);
+    
+    display: block;
+    float: right;
+    
+    color: #ccc;
+}
+
+#__site-menu li a:hover {
+    background: #333;
+}
+
+#__alt-site-menu {
+    display: none;
+}
+
+#__page-menu {
+    padding: 12px 0 6px 0;
+}
+
+#__page-menu li {
+    display: inline;
+    list-style-type: none;
+}
+
+#__page-menu li a {
+    background: #3b6b9c;
+    
+    box-shadow: 2px -1px 4px #aaa;
+    -moz-box-shadow: 2px -1px 4px #aaa;
+    -webkit-box-shadow: 2px -1px 4px #aaa;
+    
+    border-top-left-radius: 6px;
+    border-top-right-radius: 6px;
+    -moz-border-radius-topleft: 6px;
+    -moz-border-radius-topright: 6px;
+    -webkit-border-top-left-radius: 6px;
+    -webkit-border-top-right-radius: 6px;
+    
+    padding: 6px 10px;
+    
+    color: #ccc;
+}
+
+#__page-menu li a:hover {
+    background: #194e84;
+}
+
+#__feature {
+    
+}
+
+#__content {
+    font-family: 'Cantarell', arial, serif;
+}
+
+/* INTERFACE ELEMENTS */
+
+#__int-toggle-site-menu, #__int-toggle-page-menu {
+    display: none;
+}
+
+
+/*	13-column layout
+	60 px columns, 24 px gutters, 72 px margins, 1212 px total (extra space for scrollbars)
+	---------------------------------------------------------------------------------------
+	1     2      3      4      5      6      7      8      9      10     11     12     13
+	60px  144px  228px  312px  396px  480px  564px  648px  732px  816px  900px  984px  1068px	*/
+
+@media only screen and (min-width: 1212px) {
+	
+	body {
+		padding: 96px 72px 0;
+		width: 1068px;
+	}
+	
+}
+
+
+/*	5-column layout
+	60 px columns, 24 px gutters, 42 px margins, 480 px total
+	---------------------------------------------------------
+	1     2      3      4      5
+	60px  144px  228px  312px  396px	*/
+
+@media only screen and (max-width: 767px) and (min-width: 480px) {
+	
+	body {
+		padding: 60px 42px 0;
+		width: 396px;
+		/* Prevents Mobile Safari from bumping up font sizes in landscape */
+		-webkit-text-size-adjust: 100%; 
+	}
+
+}
+
+
+/*	3-column layout
+	60 px columns, 24 px gutters, 46 px margins, 320 px total
+	---------------------------------------------------------
+	1     2      3
+	60px  144px  228px	*/
+
+@media only screen and (max-width: 479px) {
+	
+	body {
+		padding: 48px 46px 0;
+		width: 228px;
+		/* Prevents Mobile Safari from bumping up font sizes in landscape */
+		-webkit-text-size-adjust: 100%;
+	}
+	
+}
+
+
+/*
+    Modifies both the 3 and 5 column layouts.
+*/
+
+@media only screen and (max-width: 767px) {
+
+    #__banner {
+        display: none;
+    }
+    
+    #__site-menu {
+        padding: 0; /* UPDATED */
+    }
+
+    #__site-menu * {
+        display: block; /* UPDATED */
+    }
+
+    #__site-menu h1 {
+        margin: auto 12px; /* ADDED */
+        display: inline; /* ADDED */
+    }
+    
+    #__site-menu ul {
+        display: none; /* ADDED */
+    }
+
+    #__site-menu li a {
+        background: #555; /* UPDATED */
+        background: -moz-linear-gradient(top, #666, #555); /* UPDATED */
+        background: -webkit-gradient(linear, left top, left bottom, from(#666), to(#555)); /* UPDATED */
+        
+        height: auto; /* UPDATED */
+        line-height: 36px; /* ADDED */
+
+        float: none; /* UPDATED */
+    }
+    
+    #__site-menu li:last-child a {
+        border-bottom-left-radius: 12px; /* ADDED */
+        border-bottom-right-radius: 12px; /* ADDED */
+        -moz-border-radius-bottomleft: 12px; /* ADDED */
+        -moz-border-radius-bottomright: 12px; /* ADDED */
+        -webkit-border-bottom-left-radius: 12px; /* ADDED */
+        -webkit-border-bottom-right-radius: 12px; /* ADDED */
+    }
+
+    #__site-menu li a:hover {
+        background: #3b6b9c; /* UPDATED */
+        background: -moz-linear-gradient(top, #3b6b9c, #194e84); /* ADDED */
+        background: -webkit-gradient(linear, left top, left bottom, from(#3B6B9C), to(#194E84)); /* ADDED */
+    }
+    
+    #__page-menu {
+        box-shadow: 2px -1px 4px #aaa; /* ADDED */
+        -moz-box-shadow: 2px -1px 4px #aaa; /* ADDED */
+        -webkit-box-shadow: 2px -1px 4px #aaa; /* ADDED */
+        
+        border-radius: 12px; /* ADDED */
+        -moz-border-radius: 12px; /* ADDED */
+        -webkit-border-radius: 12px; /* ADDED */
+        
+        padding: 0; /* UPDATED */
+        margin: 12px 0; /* ADDED */
+    }
+    
+    #__page-menu * {
+        display: block; /* ADDED */
+    }
+
+    #__page-menu ul {
+        display: none; /* ADDED */
+    }
+
+    #__page-menu li {
+        display: block; /* UPDATED */
+    }
+
+    #__page-menu li a {
+        background: #555; /* UPDATED */
+        background: -moz-linear-gradient(top, #666, #555); /* ADDED */
+        background: -webkit-gradient(linear, left top, left bottom, from(#666), to(#555)); /* ADDED */
+        
+        box-shadow: none; /* UPDATED */
+        -moz-box-shadow: none; /* UPDATED */
+        -webkit-box-shadow: none; /* UPDATED */
+        
+        border-radius: 0; /* ADDED */
+        -moz-border-radius: 0; /* ADDED */
+        -webkit-border-radius: 0; /* ADDED */
+    }
+    
+    #__page-menu li:last-child a {
+        border-bottom-left-radius: 12px; /* ADDED */
+        border-bottom-right-radius: 12px; /* ADDED */
+        -moz-border-radius-bottomleft: 12px; /* ADDED */
+        -moz-border-radius-bottomright: 12px; /* ADDED */
+        -webkit-border-bottom-left-radius: 12px; /* ADDED */
+        -webkit-border-bottom-right-radius: 12px; /* ADDED */
+    }
+
+    #__page-menu li a:hover {
+        background: #3b6b9c; /* UPDATED */
+        background: -moz-linear-gradient(top, #3b6b9c, #194e84); /* ADDED */
+        background: -webkit-gradient(linear, left top, left bottom, from(#3B6B9C), to(#194E84)); /* ADDED */
+    }
+    
+    #__feature {
+        display: none;
+    }
+    
+    /* INTERFACE ELEMENTS */
+
+    #__int-toggle-site-menu {
+        background: #333;
+        
+        padding: 0 10px;
+        height: auto; /* UPDATED */
+        line-height: 36px; /* ADDED */
+        
+        border-left: 1px solid rgba(255,255,255,0.10);
+        border-right: 1px solid rgba(0,0,0,0.17);
+        
+        display: block;
+        float: none; /* UPDATED */
+        
+        color: #ccc;
+        cursor: pointer;
+        text-decoration: underline;
+    }
+    
+    #__int-toggle-site-menu.active {
+        
+    }
+    
+    #__int-toggle-site-menu.inactive {
+        border-bottom-left-radius: 12px;
+        border-bottom-right-radius: 12px;
+        -moz-border-radius-bottomleft: 12px;
+        -moz-border-radius-bottomright: 12px;
+        -webkit-border-bottom-left-radius: 12px;
+        -webkit-border-bottom-right-radius: 12px;
+    }
+    
+    #__int-toggle-site-menu:hover {
+        background: #3b6b9c;
+        background: -moz-linear-gradient(top, #3b6b9c, #194e84);
+        background: -webkit-gradient(linear, left top, left bottom, from(#3b6b9c), to(#194e84));
+    }
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    #__int-toggle-page-menu {
+        background: #333;
+        
+        border-top-left-radius: 12px;
+        border-top-right-radius: 12px;
+        -moz-border-radius-topleft: 12px;
+        -moz-border-radius-topright: 12px;
+        -webkit-border-top-left-radius: 12px;
+        -webkit-border-top-right-radius: 12px;
+        
+        padding: 0 10px;
+        height: auto; /* UPDATED */
+        line-height: 36px; /* ADDED */
+        
+        border-left: 1px solid rgba(255,255,255,0.10);
+        border-right: 1px solid rgba(0,0,0,0.17);
+        
+        display: block;
+        float: none; /* UPDATED */
+        
+        color: #ccc;
+        cursor: pointer;
+        text-decoration: underline;
+    }
+    
+    #__int-toggle-page-menu.active {
+        border-bottom-left-radius: 0;
+        border-bottom-right-radius: 0;
+        -moz-border-radius-bottomleft: 0;
+        -moz-border-radius-bottomright: 0;
+        -webkit-border-bottom-left-radius: 0;
+        -webkit-border-bottom-right-radius: 0;
+    }
+    
+    #__int-toggle-page-menu.inactive {
+        border-radius: 12px; /* ADDED */
+        -moz-border-radius: 12px; /* ADDED */
+        -webkit-border-radius: 12px; /* ADDED */
+    }
+    
+    #__int-toggle-page-menu:hover {
+        background: #3b6b9c;
+        background: -moz-linear-gradient(top, #3b6b9c, #194e84);
+        background: -webkit-gradient(linear, left top, left bottom, from(#3b6b9c), to(#194e84));
+    }
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+}
+
