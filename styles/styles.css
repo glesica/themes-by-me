@@ -10,32 +10,61 @@
     margin: 24px auto;
     padding: 0;
     
-    width: 100%;
-    max-width: 800px;
+    max-width: 100%;
     display: block;
 }
 
 #__content pre {
-    background: url(code_bg.png) repeat-y left top;
+    background: #333;
     
-    margin: 24px auto;
-	padding: 0;
+    margin: 24px 0;
+	padding: 24px;
 	
 	border: none;
 	border-left: 1px solid #ccc;
 	
-	width: 100%;
-	max-width: 800px;
-	overflow: auto;
+	overflow: hidden;
 	
 	font-size: 12px;
 	color: #fff;
 	line-height: 20px;
 }
 
+#__content pre.augmented {
+    margin: 24px 0 0 0;
+}
+
 #__content pre code {
     margin: 0;
-	padding: 20px 0 20px 36px;
 	
 	display: block;
+}
+
+#__content div.preLinkBar {
+    background: #eee;
+    
+    margin: 0 0 24px 0;
+    padding: 0;
+}
+
+#__content div.preLinkBar a {
+    margin: 0 6px 0 0;
+    padding: 0;
+    
+    cursor: pointer
+}
+
+#__content div.preLinkBar img {
+    width: 18px;
+    height: 18px;
+    
+    margin: 0;
+    padding: 2px 0 4px 4px;
+    
+    vertical-align: middle;
+    display: inline;
+}
+
+#__content div.preLinkBar a:hover {
+    text-decoration: underline;
 }

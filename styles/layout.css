@@ -1,6 +1,7 @@
-/*	Less Framework 3
+/*	Less Framework 4
+	http://lessframework.com
 	by Joni Korpi
-	http://lessframework.com	*/
+	License: http://creativecommons.org/licenses/MIT/	*/
 
 
 /*	Resets
@@ -8,7 +9,7 @@
 
 html, body, div, span, object, iframe, h1, h2, h3, h4, h5, h6, 
 p, blockquote, pre, a, abbr, address, cite, code, del, dfn, em, 
-img, ins, kbd, q, samp, small, strong, sub, sup, var, b, i, 
+img, ins, kbd, q, samp, small, strong, sub, sup, var, b, i, hr, 
 dl, dt, dd, ol, ul, li, fieldset, form, label, legend, 
 table, caption, tbody, tfoot, thead, tr, th, td,
 article, aside, canvas, details, figure, figcaption, hgroup, 
@@ -25,11 +26,9 @@ footer, header, nav, section, audio, video {
 
 a img {border: 0;}
 
-figure {position: relative;}
-figure img {width: 100%;}
 
 
-/*	Typography presets
+/*  Typography presets
 	------------------	*/
 
 .gigantic {
@@ -49,75 +48,96 @@ figure img {width: 100%;}
 	line-height: 48px;
 }
 
-.big, h3 {
+.bigger, h3 {
 	font-size: 26px;
 	line-height: 36px;
 }
 
-.normal, body {
+.big, h4 {
+	font-size: 22px;
+	line-height: 30px;
+}
+
+body {
 	font: 16px/24px Helvetica, Arial, sans-serif;
 }
 
-.small {
+.small, small {
 	font-size: 13px;
 	line-height: 18px;
-} 
-
-
-/*	Default 8-column layout
-	60 px columns, 24 px gutters, 60 px margins, 768 px total
-	---------------------------------------------------------
-	1     2      3      4      5      6      7      8     
-	60px  144px  228px  312px  396px  480px  564px  648px	*/
-
-body {
-	background: rgb(232,232,232);
-	background: #fff;
-	padding: 84px 60px 0;
-	width: 648px;
-	-webkit-tap-highlight-color: rgb(255,255,0);
-	margin: auto;
-	color: #333;
 }
 
-::selection 	 	{background: rgb(255,255,0);}
-::-moz-selection 	{background: rgb(255,255,0);}
-img::selection 		{background: transparent;}
-img::-moz-selection {background: transparent;}
+/* Selection colours (easy to forget) */
 
-/* MAIN LAYOUT STYLES */
+::selection 	 	{background: rgb(255,255,158);}
+::-moz-selection 	{background: rgb(255,255,158);}
+img::selection 		{background: transparent;}
+img::-moz-selection	{background: transparent;}
+body {-webkit-tap-highlight-color: rgb(255,255,158);}
+
+/*  List presets
+    ------------  */
+
+ul {
+	list-style-position: inside;
+}
+
+
+
+/*		Default Layout: 992px. 
+		Gutters: 24px.
+		Outer margins: 48px.
+		Leftover space for scrollbars @1024px: 32px.
+-------------------------------------------------------------------------------
+cols    1     2      3      4      5      6      7      8      9      10
+px      68    160    252    344    436    528    620    712    804    896    */
+
+body {
+    padding: 72px 0 0;
+    background: #fff;
+	color: rgb(60,60,60);
+	-webkit-text-size-adjust: 100%; /* Stops Mobile Safari from auto-adjusting font-sizes */
+}
+
+.body {
+	width: 896px;
+	padding: 0 48px;
+	margin: auto;
+}
+
+/* HEADER AREA */
 
 #__header-bar {
-    background: url('head1.png') no-repeat;
+    background: #eee;
+    background: url('../img/banner01.png') no-repeat; /* Controls banner background image */
     
     box-shadow: 2px 2px 5px #aaa;
     -moz-box-shadow: 2px 2px 5px #aaa;
     -webkit-box-shadow: 2px 2px 5px #aaa;
     
-    border-radius: 12px;
-    -moz-border-radius: 12px;
-    -webkit-border-radius: 12px;
-
-    margin-bottom: 12px;
+    border-radius: 3px;
+    -moz-border-radius: 3px;
+    -webkit-border-radius: 3px;
 }
 
 #__banner {
-    padding: 12px 12px 0 12px;
+    padding: 12px;
     
-    /*
-    This style can be toggled to show or hide the banner above the menu bar.
-    */
-    /*display: none;*/
+    min-height: 24px;
+    
+    display: none; /* Toggle to show or hide the banner above the menu bar */
 }
+
+/* SITE MENU */
 
 #__site-menu {
     background: #444;
     background: -moz-linear-gradient(top, #666, #333);
     background: -webkit-gradient(linear, left top, left bottom, from(#666), to(#333));
     
-    border-radius: 12px;
-    -moz-border-radius: 12px;
-    -webkit-border-radius: 12px;
+    border-radius: 3px;
+    -moz-border-radius: 3px;
+    -webkit-border-radius: 3px;
     
     padding: 0 12px;
 }
@@ -128,7 +148,7 @@ img::-moz-selection {background: transparent;}
 }
 
 #__site-menu h1 {
-    background: url(logo-24.png) no-repeat;
+    background: url('img/logo-24.png') no-repeat;
     
     padding: 0 0 0 36px;
 
@@ -165,8 +185,19 @@ img::-moz-selection {background: transparent;}
     display: none;
 }
 
+/* PAGE MENU */
+
 #__page-menu {
-    padding: 12px 0 6px 0;
+	background: #eee;
+	
+	border-radius: 3px;
+    -moz-border-radius: 3px;
+    -webkit-border-radius: 3px;
+	
+    padding: 12px;
+    margin-top: 12px;
+    
+    /*display: none;  Toggle to show or hide the page menu */
 }
 
 #__page-menu li {
@@ -175,34 +206,70 @@ img::-moz-selection {background: transparent;}
 }
 
 #__page-menu li a {
-    background: #3b6b9c;
+    color: #333;
     
-    box-shadow: 2px -1px 4px #aaa;
-    -moz-box-shadow: 2px -1px 4px #aaa;
-    -webkit-box-shadow: 2px -1px 4px #aaa;
+    border-left: 1px solid #333;
     
-    border-top-left-radius: 6px;
-    border-top-right-radius: 6px;
-    -moz-border-radius-topleft: 6px;
-    -moz-border-radius-topright: 6px;
-    -webkit-border-top-left-radius: 6px;
-    -webkit-border-top-right-radius: 6px;
-    
-    padding: 6px 10px;
-    
-    color: #ccc;
+    padding: 0 10px;
+}
+
+#__page-menu li:first-child a {
+	border-left: none;
 }
 
 #__page-menu li a:hover {
-    background: #194e84;
+    text-decoration: none;
 }
 
+/* FEATURE CONTENT AREA */
+
 #__feature {
-    
+    position: relative;
+    overflow: hidden;
+    height: 504px; /* Not sure why this is necessary but otherwise div has 7px padding on bottom */
+    margin-top: 24px;
+    /*display: none;  Toggle to show or hide the feature area */
 }
+
+#__feature img {
+	max-width: 100%;
+}
+
+#__feature .content {
+	background: rgba(0,0,0,0.5);
+	color: #ccc;
+	padding: 24px;
+	position: absolute;
+	left: 0;
+	top: 0;
+}
+
+/* SUB-FEATURE CONTENT AREA */
+
+#__sub-feature {
+	margin-top: 24px;
+}
+
+#__sub-feature .block {
+	float: left;
+	width: 436px;
+	margin-left: 24px;
+}
+
+#__sub-feature .block:first-child {
+	margin-left: 0;
+}
+
+#__sub-feature .block img {
+	max-width: 436px;
+}
+
+/* CONTENT AREA */
 
 #__content {
     font-family: 'Cantarell', arial, serif;
+    display: none; /* Toggle to show or hide the main content area */
+    margin-top: 12px;
 }
 
 /* INTERFACE ELEMENTS */
@@ -211,68 +278,123 @@ img::-moz-selection {background: transparent;}
     display: none;
 }
 
+/* FOOTER */
 
-/*	13-column layout
-	60 px columns, 24 px gutters, 72 px margins, 1212 px total (extra space for scrollbars)
-	---------------------------------------------------------------------------------------
-	1     2      3      4      5      6      7      8      9      10     11     12     13
-	60px  144px  228px  312px  396px  480px  564px  648px  732px  816px  900px  984px  1068px	*/
+#__footer {
+    background: #eee;
+    
+    width: 100%;
+    
+    padding: 24px 0 24px 0;
+    margin-top: 24px;
 
-@media only screen and (min-width: 1212px) {
-	
-	body {
-		padding: 96px 72px 0;
-		width: 1068px;
-	}
-	
+    border-top: 1px dotted #333;
+}
+
+#__footer .block {
+    margin-left: 24px;
+    
+    width: 344px;
+    
+    float: left;
+}
+
+#__footer .block:first-child {
+    margin-left: 0;
+    
+    width: 252px;
+}
+
+#__footer .block:last-child {
+    width: 252px;
+}
+
+/* COPYRIGHT NOTICE */
+
+#__copyright p {
+    padding-top: 24px;
+    text-align: center;
 }
 
 
-/*	5-column layout
-	60 px columns, 24 px gutters, 42 px margins, 480 px total
-	---------------------------------------------------------
-	1     2      3      4      5
-	60px  144px  228px  312px  396px	*/
 
-@media only screen and (max-width: 767px) and (min-width: 480px) {
+/*		Tablet Layout: 768px.
+		Gutters: 24px.
+		Outer margins: 28px.
+		Inherits styles from: Default Layout.
+-----------------------------------------------------------------
+cols    1     2      3      4      5      6      7      8
+px      68    160    252    344    436    528    620    712    */
+
+@media only screen and (min-width: 768px) and (max-width: 991px) {
 	
 	body {
-		padding: 60px 42px 0;
-		width: 396px;
-		/* Prevents Mobile Safari from bumping up font sizes in landscape */
-		-webkit-text-size-adjust: 100%; 
+	    padding: 48px 0 0;
 	}
+	
+	.body {
+		width: 712px;
+		padding: 0 28px;
+	}
+	
+	#__feature {
+		height: 400px;
+	}
+	
+	/* SUB-FEATURE CONTENT AREA */
+
+	#__sub-feature .block {
+		width: 344px;
+	}
+	
+	#__sub-feature .block img {
+		max-width: 344px;
+	}
+
+    /* FOOTER */
+    
+    #__footer .block {
+        width: 344px;
+    }
+    
+    #__footer .block:first-child {
+        width: 160px;
+    }
+    
+    #__footer .block:last-child {
+        width: 160px;
+    }
 
 }
 
 
-/*	3-column layout
-	60 px columns, 24 px gutters, 46 px margins, 320 px total
-	---------------------------------------------------------
-	1     2      3
-	60px  144px  228px	*/
 
-@media only screen and (max-width: 479px) {
-	
-	body {
-		padding: 48px 46px 0;
-		width: 228px;
-		/* Prevents Mobile Safari from bumping up font sizes in landscape */
-		-webkit-text-size-adjust: 100%;
-	}
-	
-}
-
-
-/*
-    Modifies both the 3 and 5 column layouts.
-*/
+/*		Mobile Layout: 320px.
+		Gutters: 24px.
+		Outer margins: 34px.
+		Inherits styles from: Default Layout.
+---------------------------------------------
+cols    1     2      3
+px      68    160    252    */
 
 @media only screen and (max-width: 767px) {
-
-    #__banner {
+	
+	body {
+	    padding: 48px 0 0;
+	}
+	
+	.body {
+		width: 252px;
+		padding: 0 34px;
+	}
+	
+	/* HEADER AREA */
+	
+	#__banner {
         display: none;
     }
+    
+    /* SITE MENU */
     
     #__site-menu {
         padding: 0; /* UPDATED */
@@ -303,12 +425,12 @@ img::-moz-selection {background: transparent;}
     }
     
     #__site-menu li:last-child a {
-        border-bottom-left-radius: 12px; /* ADDED */
-        border-bottom-right-radius: 12px; /* ADDED */
-        -moz-border-radius-bottomleft: 12px; /* ADDED */
-        -moz-border-radius-bottomright: 12px; /* ADDED */
-        -webkit-border-bottom-left-radius: 12px; /* ADDED */
-        -webkit-border-bottom-right-radius: 12px; /* ADDED */
+        border-bottom-left-radius: 6px; /* ADDED */
+        border-bottom-right-radius: 6px; /* ADDED */
+        -moz-border-radius-bottomleft: 6px; /* ADDED */
+        -moz-border-radius-bottomright: 6px; /* ADDED */
+        -webkit-border-bottom-left-radius: 6px; /* ADDED */
+        -webkit-border-bottom-right-radius: 6px; /* ADDED */
     }
 
     #__site-menu li a:hover {
@@ -317,17 +439,19 @@ img::-moz-selection {background: transparent;}
         background: -webkit-gradient(linear, left top, left bottom, from(#3B6B9C), to(#194E84)); /* ADDED */
     }
     
+    /* PAGE MENU */
+    
     #__page-menu {
         box-shadow: 2px -1px 4px #aaa; /* ADDED */
         -moz-box-shadow: 2px -1px 4px #aaa; /* ADDED */
         -webkit-box-shadow: 2px -1px 4px #aaa; /* ADDED */
         
-        border-radius: 12px; /* ADDED */
-        -moz-border-radius: 12px; /* ADDED */
-        -webkit-border-radius: 12px; /* ADDED */
+        border-radius: 6px; /* ADDED */
+        -moz-border-radius: 6px; /* ADDED */
+        -webkit-border-radius: 6px; /* ADDED */
         
         padding: 0; /* UPDATED */
-        margin: 12px 0; /* ADDED */
+        margin: 12px auto; /* ADDED */
     }
     
     #__page-menu * {
@@ -357,12 +481,12 @@ img::-moz-selection {background: transparent;}
     }
     
     #__page-menu li:last-child a {
-        border-bottom-left-radius: 12px; /* ADDED */
-        border-bottom-right-radius: 12px; /* ADDED */
-        -moz-border-radius-bottomleft: 12px; /* ADDED */
-        -moz-border-radius-bottomright: 12px; /* ADDED */
-        -webkit-border-bottom-left-radius: 12px; /* ADDED */
-        -webkit-border-bottom-right-radius: 12px; /* ADDED */
+        border-bottom-left-radius: 3px; /* ADDED */
+        border-bottom-right-radius: 3px; /* ADDED */
+        -moz-border-radius-bottomleft: 3px; /* ADDED */
+        -moz-border-radius-bottomright: 3px; /* ADDED */
+        -webkit-border-bottom-left-radius: 3px; /* ADDED */
+        -webkit-border-bottom-right-radius: 3px; /* ADDED */
     }
 
     #__page-menu li a:hover {
@@ -371,9 +495,31 @@ img::-moz-selection {background: transparent;}
         background: -webkit-gradient(linear, left top, left bottom, from(#3B6B9C), to(#194E84)); /* ADDED */
     }
     
+    /* FEATURE CONTENT AREA */
+    
     #__feature {
         display: none;
     }
+    
+    /* SUB-FEATURE CONTENT AREA */
+
+	#__sub-feature {
+		margin-top: 24px;
+	}
+	
+	#__sub-feature .block {
+		width: 100%;
+		float: none;
+		margin-left: 0;
+	}
+	
+	#__sub-feature .block:first-child {
+		margin-bottom: 24px;
+	}
+	
+	#__sub-feature .block img {
+		max-width: 100%;
+	}
     
     /* INTERFACE ELEMENTS */
 
@@ -400,12 +546,12 @@ img::-moz-selection {background: transparent;}
     }
     
     #__int-toggle-site-menu.inactive {
-        border-bottom-left-radius: 12px;
-        border-bottom-right-radius: 12px;
-        -moz-border-radius-bottomleft: 12px;
-        -moz-border-radius-bottomright: 12px;
-        -webkit-border-bottom-left-radius: 12px;
-        -webkit-border-bottom-right-radius: 12px;
+        border-bottom-left-radius: 3px;
+        border-bottom-right-radius: 3px;
+        -moz-border-radius-bottomleft: 3px;
+        -moz-border-radius-bottomright: 3px;
+        -webkit-border-bottom-left-radius: 3px;
+        -webkit-border-bottom-right-radius: 3px;
     }
     
     #__int-toggle-site-menu:hover {
@@ -413,28 +559,16 @@ img::-moz-selection {background: transparent;}
         background: -moz-linear-gradient(top, #3b6b9c, #194e84);
         background: -webkit-gradient(linear, left top, left bottom, from(#3b6b9c), to(#194e84));
     }
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
+
     #__int-toggle-page-menu {
         background: #333;
         
-        border-top-left-radius: 12px;
-        border-top-right-radius: 12px;
-        -moz-border-radius-topleft: 12px;
-        -moz-border-radius-topright: 12px;
-        -webkit-border-top-left-radius: 12px;
-        -webkit-border-top-right-radius: 12px;
+        border-top-left-radius: 3px;
+        border-top-right-radius: 3px;
+        -moz-border-radius-topleft: 3px;
+        -moz-border-radius-topright: 3px;
+        -webkit-border-top-left-radius: 3px;
+        -webkit-border-top-right-radius: 3px;
         
         padding: 0 10px;
         height: auto; /* UPDATED */
@@ -461,9 +595,9 @@ img::-moz-selection {background: transparent;}
     }
     
     #__int-toggle-page-menu.inactive {
-        border-radius: 12px; /* ADDED */
-        -moz-border-radius: 12px; /* ADDED */
-        -webkit-border-radius: 12px; /* ADDED */
+        border-radius: 3px; /* ADDED */
+        -moz-border-radius: 3px; /* ADDED */
+        -webkit-border-radius: 3px; /* ADDED */
     }
     
     #__int-toggle-page-menu:hover {
@@ -472,19 +606,59 @@ img::-moz-selection {background: transparent;}
         background: -webkit-gradient(linear, left top, left bottom, from(#3b6b9c), to(#194e84));
     }
     
+    /* FOOTER */
     
+    #__footer .block {
+        margin: 0 0 24px 0;
+        width: 252px;
+    }
     
+    #__footer .block:first-child {
+        width: 252px;
+    }
     
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
+    #__footer .block:last-child {
+        margin: 0;
+        width: 252px;
+    }
+	
 }
 
+
+
+/*		Wide Mobile Layout: 480px.
+		Gutters: 24px.
+		Outer margins: 22px.
+		Inherits styles from: Default Layout, Mobile Layout.
+------------------------------------------------------------
+cols    1     2      3      4      5
+px      68    160    252    344    436    */
+
+@media only screen and (min-width: 480px) and (max-width: 767px) {
+	
+	body {
+	    padding: 36px 0 0;
+	}
+	
+	.body {
+		width: 436px;
+		padding: 0 22px;
+	}
+	
+	/* FOOTER */
+    
+    #__footer .block {
+        margin: 0 0 24px 0;
+        width: 436px;
+    }
+    
+    #__footer .block:first-child {
+        width: 436px;
+    }
+    
+    #__footer .block:last-child {
+        margin: 0;
+        width: 436px;
+    }
+	
+}
