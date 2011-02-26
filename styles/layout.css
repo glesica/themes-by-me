@@ -267,8 +267,8 @@ body {
 /* CONTENT AREA */
 
 #__content {
-    font-family: 'Cantarell', arial, serif;
-    display: none; /* Toggle to show or hide the main content area */
+    font-family: 'Lato', arial, serif;
+    /*display: none;  Toggle to show or hide the main content area */
     margin-top: 12px;
 }
 
