@@ -226,28 +226,31 @@ body {
 #__feature {
     position: relative;
     overflow: hidden;
-    height: 504px; /* Not sure why this is necessary but otherwise div has 7px padding on bottom */
     margin-top: 24px;
+    line-height: 0;
     /*display: none;  Toggle to show or hide the feature area */
 }
 
 #__feature img {
 	max-width: 100%;
+	max-height: 504px;
 }
 
 #__feature .content {
-	background: rgba(0,0,0,0.5);
+ 	background: rgba(0,0,0,0.5);
 	color: #ccc;
 	padding: 24px;
 	position: absolute;
 	left: 0;
 	top: 0;
+	line-height: 24px;
 }
 
 /* SUB-FEATURE CONTENT AREA */
 
 #__sub-feature {
 	margin-top: 24px;
+	/*display: none;  Toggle to show or hide the main sub-feature area */
 }
 
 #__sub-feature .block {
@@ -268,8 +271,29 @@ body {
 
 #__content {
     font-family: 'Lato', arial, serif;
-    /*display: none;  Toggle to show or hide the main content area */
+    display: none; /* Toggle to show or hide the main content area */
     margin-top: 12px;
+}
+
+/* PHOTO GALLERY */
+
+#__gallery {
+	margin-top: 24px;
+	display: none; /* Toggle to show or hide the main gallery area */
+}
+
+#__gallery .block {
+	width: 160px;
+	padding: 8px;
+	margin: 0 auto 4px auto;
+	display: inline-block;
+	overflow: hidden;
+	line-height: 0;
+    background: #eee;
+}
+
+#__gallery .block img {
+	max-width: 160px;
 }
 
 /* INTERFACE ELEMENTS */
@@ -349,6 +373,16 @@ px      68    160    252    344    436    528    620    712    */
 	
 	#__sub-feature .block img {
 		max-width: 344px;
+	}
+	
+	/* PHOTO GALLERY */
+	
+	#__gallery .block {
+		width: 159px;
+	}
+	
+	#__gallery .block img {
+		max-width: 159px;
 	}
 
     /* FOOTER */
@@ -520,6 +554,16 @@ px      68    160    252    */
 	#__sub-feature .block img {
 		max-width: 100%;
 	}
+	
+	/* PHOTO GALLERY */
+	
+	#__gallery .block {
+		width: 236px;
+	}
+	
+	#__gallery .block img {
+		max-width: 236px;
+	}
     
     /* INTERFACE ELEMENTS */
 
@@ -643,6 +687,16 @@ px      68    160    252    344    436    */
 	.body {
 		width: 436px;
 		padding: 0 22px;
+	}
+	
+	/* PHOTO GALLERY */
+	
+	#__gallery .block {
+		width: 420px;
+	}
+	
+	#__gallery .block img {
+		max-width: 420px;
 	}
 	
 	/* FOOTER */

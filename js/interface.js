@@ -77,5 +77,6 @@ $(document).ready(function() {
     $('#__int-toggle-page-menu').click(togglePageMenu);
 
     setupExpandableImages($('#__content img'));
+    setupExpandableImages($('#__gallery img'));
     setupExpandableBoxes($('#__content pre'));
 });
