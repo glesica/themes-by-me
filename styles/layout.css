@@ -148,9 +148,8 @@ body {
 }
 
 #__site-menu h1 {
-    background: url('img/logo-24.png') no-repeat;
-    
-    padding: 0 0 0 36px;
+    /*background: url('img/logo-24.png') no-repeat;
+    padding: 0 0 0 36px; Toggle these two settings to turn the logo image on or off */
 
     font-size: 20px;
     color: #ccc;
@@ -271,8 +270,9 @@ body {
 
 #__content {
     font-family: 'Lato', arial, serif;
-    display: none; /* Toggle to show or hide the main content area */
     margin-top: 12px;
+    
+    /*display: none;  Toggle to show or hide the main content area */
 }
 
 /* PHOTO GALLERY */
