@@ -340,7 +340,7 @@ body {
 }
 
 #__copyright:first-child p:first-child {
-	padding-top: 24px;
+	padding-top: 0;
 }
 
 #__copyright p {
