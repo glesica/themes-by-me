@@ -78,7 +78,7 @@ body {-webkit-tap-highlight-color: rgb(255,255,158);}
 /*  List presets
     ------------  */
 
-ul {
+ol, ul {
 	list-style-position: inside;
 }
 
@@ -512,6 +512,9 @@ px      68    160    252    */
         border-radius: 0; /* ADDED */
         -moz-border-radius: 0; /* ADDED */
         -webkit-border-radius: 0; /* ADDED */
+        
+        line-height: 36px; /* ADDED */
+        color: #ccc; /* ADDED */
     }
     
     #__page-menu li:last-child a {
@@ -527,6 +530,8 @@ px      68    160    252    */
         background: #3b6b9c; /* UPDATED */
         background: -moz-linear-gradient(top, #3b6b9c, #194e84); /* ADDED */
         background: -webkit-gradient(linear, left top, left bottom, from(#3B6B9C), to(#194E84)); /* ADDED */
+        
+        text-decoration: underline; /* ADDED */
     }
     
     /* FEATURE CONTENT AREA */

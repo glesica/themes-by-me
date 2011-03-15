@@ -1,9 +1,9 @@
 #__content p {
-    margin: 24px 0;
+    margin: 12px 0;
 }
 
 #__content ul {
-    margin: 24px 0;
+    margin-left: 24px;
 }
 
 #__content img {
