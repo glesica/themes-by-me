@@ -335,8 +335,15 @@ body {
 
 /* COPYRIGHT NOTICE */
 
+#__copyright p:first-child {
+	padding-top: 24px;
+}
+
+#__copyright:first-child p:first-child {
+	padding-top: 24px;
+}
+
 #__copyright p {
-    padding-top: 24px;
     text-align: center;
 }
 
