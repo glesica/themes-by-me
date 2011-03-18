@@ -151,6 +151,10 @@ body {
     /*background: url('img/logo-24.png') no-repeat;
     padding: 0 0 0 36px; Toggle these two settings to turn the logo image on or off */
 
+    text-shadow: 0 -1px 1px rgba(0,0,0,0.5);
+    -moz-text-shadow: 0 -1px 1px rgba(0,0,0,0.5);
+    -webkit-text-shadow: 0 -1px 1px rgba(0,0,0,0.5);
+
     font-size: 20px;
     color: #ccc;
 }
@@ -163,6 +167,10 @@ body {
     background: #444;
     background: -moz-linear-gradient(top, #666, #333);
     background: -webkit-gradient(linear, left top, left bottom, from(#666), to(#333));
+    
+    text-shadow: 0 -1px 1px rgba(0,0,0,0.5);
+    -moz-text-shadow:0 -1px 1px rgba(0,0,0,0.5);
+    -webkit-text-shadow:0 -1px 1px rgba(0,0,0,0.5);
     
     padding: 0 10px;
     height: 60px;
@@ -193,7 +201,7 @@ body {
 /* PAGE MENU */
 
 #__page-menu {
-	background: #eee;
+	background: #ddd;
 	
 	border-radius: 3px;
     -moz-border-radius: 3px;
@@ -213,9 +221,9 @@ body {
 #__page-menu li a {
     color: #333;
     
-    border-left: 1px solid #333;
-    
     padding: 0 10px;
+    
+    border-left: 1px solid #333;
 }
 
 #__page-menu li:first-child a {
@@ -311,7 +319,7 @@ body {
 /* FOOTER */
 
 #__footer {
-    background: #eee;
+    background: #ddd;
     
     width: 100%;
     
@@ -327,6 +335,14 @@ body {
     width: 344px;
     
     float: left;
+}
+
+#__footer .block h3 {
+    color: #333;
+
+    text-shadow: 0 -1px 1px rgba(0,0,0,0.5);
+    -moz-text-shadow: 0 -1px 1px rgba(0,0,0,0.5);
+    -webkit-text-shadow: 0 -1px 1px rgba(0,0,0,0.5);
 }
 
 #__footer .block:first-child {
@@ -521,6 +537,10 @@ px      68    160    252    */
         box-shadow: none; /* UPDATED */
         -moz-box-shadow: none; /* UPDATED */
         -webkit-box-shadow: none; /* UPDATED */
+        
+        text-shadow: 0 -1px 1px rgba(0,0,0,0.5); /* ADDED */
+        -moz-text-shadow:0 -1px 1px rgba(0,0,0,0.5); /* ADDED */
+        -webkit-text-shadow:0 -1px 1px rgba(0,0,0,0.5); /* ADDED */
         
         border-radius: 0; /* ADDED */
         -moz-border-radius: 0; /* ADDED */
