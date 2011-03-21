@@ -107,25 +107,14 @@ body {
 
 /* HEADER AREA */
 
-#__header-bar {
-    background: #eee;
-    background: url('../img/banner01.png') no-repeat; /* Controls banner background image */
-    
-    box-shadow: 2px 2px 5px #aaa;
+#__header {
+	box-shadow: 2px 2px 5px #aaa;
     -moz-box-shadow: 2px 2px 5px #aaa;
     -webkit-box-shadow: 2px 2px 5px #aaa;
     
     border-radius: 3px;
     -moz-border-radius: 3px;
     -webkit-border-radius: 3px;
-}
-
-#__banner {
-    padding: 12px;
-    
-    min-height: 24px;
-    
-    display: none; /* Toggle to show or hide the banner above the menu bar */
 }
 
 /* SITE MENU */
@@ -293,7 +282,7 @@ body {
 
 #__gallery {
 	margin-top: 24px;
-	display: none; /* Toggle to show or hide the main gallery area */
+	/*display: none;  Toggle to show or hide the main gallery area */
 }
 
 #__gallery .block {

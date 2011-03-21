@@ -22,26 +22,24 @@
 	</head>
 
 	<body>
-	    <div id="__header" class="body">
-	        <div id="__header-bar">
-	            <div id="__banner">
-
+        <div class="body">
+            <div id="__header">
+                <div id="__site-menu">
+                    <h1>Sweet Company</h1>
+                    <a id="__int-toggle-site-menu" class="inactive">Site Menu</a>
+                    <ul>
+                        <li><a href="#">Home</a></li>
+                        <li><a href="#" class="active">Search</a></li>
+                        <li><a href="#">About</a></li>
+                        <li><a href="#">Contact</a></li>
+                    </ul>
+                    <div style="clear: both; display: block;"></div>
                 </div>
-	            <div id="__site-menu">
-	                <h1>Sweet Company</h1>
-	                <a id="__int-toggle-site-menu" class="inactive">Site Menu</a>
-	                <ul>
-	                    <li><a href="#">Home</a></li>
-	                    <li><a href="#" class="active">Search</a></li>
-	                    <li><a href="#">About</a></li>
-	                    <li><a href="#">Contact</a></li>
-	                </ul>
-	                <div style="clear: both; display: block;"></div>
-	            </div>
-	        </div>
-	        
-	        
-	        <div id="__page-menu">
+            </div>
+        </div>
+	    
+	    <div class="body">
+            <div id="__page-menu">
                 <a id="__int-toggle-page-menu" class="inactive">Page Menu</a>
                 <ul>
                     <li><a href="#">Edit</a></li>
@@ -51,119 +49,125 @@
                     <li><a href="#">Source</a></li>
                 </ul>
             </div>
-	        
-	        
-	        <div id="__feature">
-	            <img src="img/feature01.png" />
-                <div class="content">
-                    <h4>Awesome Stuff</h4>
-                    <p>Lorem ipsum dolor sit amet, nec hac sit convallis dolores aliquet et, sed vivamus.
-                    Venenatis suspendisse lobortis metus sem, sem sapien convallis ut, scelerisque donec.</p>
+        </div>
+	    
+	    <div class="body">
+            <div id="__feature">
+                <div class="block">
+                    <img src="img/feature01.png" />
+                    <div class="content">
+                        <h4>Awesome Stuff</h4>
+                        <p>Lorem ipsum dolor sit amet, nec hac sit convallis dolores aliquet et, sed vivamus.
+                        Venenatis suspendisse lobortis metus sem, sem sapien convallis ut, scelerisque donec.</p>
+                    </div>
                 </div>
             </div>
-	    </div>
+        </div>
 	    
-	    
-	    <div id="__sub-feature" class="body">
-	        <div class="block">
-	            <img src="img/feature02.png" />
-	            <div class="content">
-	                <h4>New Product</h4>
-	                <p>Venenatis suspendisse lobortis sapien convallis ut, scelerisque donec.</p>
-	                <p><a href="#">Learn More</a> | <a href="#">Download</a></p>
-	            </div>
-	        </div>
-	        <div class="block">
-	            <img src="img/feature03.png" />
-	            <div class="content">
-	                <h4>Updated Product</h4>
-	                <p>Venenatis suspendisse lobortis sapien convallis ut, scelerisque donec.</p>
-	                <p><a href="#">Download</a></p>
-	            </div>
-	        </div>
-	        <div style="clear: both;"></div>
+	    <div class="body">
+            <div id="__sub-feature">
+                <div class="block">
+                    <img src="img/feature02.png" />
+                    <div class="content">
+                        <h4>New Product</h4>
+                        <p>Venenatis suspendisse lobortis sapien convallis ut, scelerisque donec.</p>
+                        <p><a href="#">Learn More</a> | <a href="#">Download</a></p>
+                    </div>
+                </div>
+                <div class="block">
+                    <img src="img/feature03.png" />
+                    <div class="content">
+                        <h4>Updated Product</h4>
+                        <p>Venenatis suspendisse lobortis sapien convallis ut, scelerisque donec.</p>
+                        <p><a href="#">Download</a></p>
+                    </div>
+                </div>
+                <div style="clear: both;"></div>
+            </div>
 	    </div>
         
-    
-        <div id="__content" class="body">
-            <!-- content -->
-            <h2>Welcome</h2>
-            <p>Lorem ipsum dolor sit amet, nec hac sit convallis dolores aliquet et, sed vivamus ac pellentesque adipiscing nec, id duis. Sapien a nec, nec at, egestas praesent arcu, sed neque odio fames sit maecenas cras, sit wisi hac ut. Nunc turpis nam tempor egestas libero, id wisi a sollicitudin in ante risus, totam est mauris nullam, dui suspendisse et vestibulum blandit, dictumst duis nibh. Venenatis suspendisse lobortis metus sem, sem sapien convallis ut, scelerisque donec morbi vestibulum. Ipsum sociosqu. Elit et nec. Magnis taciti odio quas sed, nec semper in amet, nunc mollis auctor interdum magna molestie, justo ut nostra ipsum lectus volutpat. Iaculis gravida nec sem tincidunt eu, pulvinar lorem senectus tempus fringilla, risus eleifend, ornare diam, montes in vestibulum dolor et egestas.</p>
-            <a href="img/logo-60.png">This is some text linkage</a>
-            <p>Here is some preformatted text to test out.</p>
-            <pre><code>def myfunc(a, b):
-l = [i ** a for i in xrange(b * 2)]
-print b ** a
-return None</code></pre>
-            <h3>More Information</h3>
-            <p>Lorem ipsum dolor sit amet, nec hac sit convallis dolores aliquet et, sed vivamus ac pellentesque adipiscing nec, id duis. Sapien a nec, nec at, egestas praesent arcu, sed neque odio fames sit maecenas cras, sit wisi hac ut. Nunc turpis nam tempor egestas libero, id wisi a sollicitudin in ante risus, totam est mauris nullam, dui suspendisse et vestibulum blandit, dictumst duis nibh. Venenatis suspendisse lobortis metus sem, sem sapien convallis ut, scelerisque donec morbi vestibulum. Ipsum sociosqu. Elit et nec. Magnis taciti odio quas sed, nec semper in amet, nunc mollis auctor interdum magna molestie, justo ut nostra ipsum lectus volutpat. Iaculis gravida nec sem tincidunt eu, pulvinar lorem senectus tempus fringilla, risus eleifend, ornare diam, montes in vestibulum dolor et egestas.</p>
-            <img src="img/feature02.png" />
-            <p>Lectus quis interdum tincidunt at. Elit voluptate, justo scelerisque pellentesque lacus eget viverra quam. Velit integer dignissim amet libero tristique est, curabitur rutrum lacinia, sociosqu id. Odio in accumsan ultricies in amet. Sed a sed augue, lacus posuere leo aptent, ipsum ut lacus a in purus, pharetra quo vestibulum. Vivamus duis porttitor facilisis in luctus. Suspendisse ligula phasellus vitae, in sed porta sodales, lorem vestibulum nec, velit phasellus. At nam, potenti volutpat in, purus curae vel massa euismod nibh hendrerit. Lacinia nec elit sollicitudin facilisis praesent, nulla risus taciti imperdiet ac. Enim accumsan sem vitae urna.</p>
-            <ul>
-                <li>This is a list of stuff</li>
-                <li>It lists awesome things
-                    <ul>
-                        <li>This is a sub-list to check indent</li>
-                        <li>Also awesome stuff here</li>
-                    </ul>
-                </li>
-                <li>Another list item</li>
-            </ul>
-            <p>Lorem ipsum dolor sit amet, nec hac sit convallis dolores aliquet et, sed vivamus ac pellentesque adipiscing nec, id duis. Sapien a nec, nec at, egestas praesent arcu, sed neque odio fames sit maecenas cras, sit wisi hac ut. Nunc turpis nam tempor egestas libero, id wisi a sollicitudin in ante risus, totam est mauris nullam, dui suspendisse et vestibulum blandit, dictumst duis nibh. Venenatis suspendisse lobortis metus sem, sem sapien convallis ut, scelerisque donec morbi vestibulum. Ipsum sociosqu. Elit et nec. Magnis taciti odio quas sed, nec semper in amet, nunc mollis auctor interdum magna molestie, justo ut nostra ipsum lectus volutpat. Iaculis gravida nec sem tincidunt eu, pulvinar lorem senectus tempus fringilla, risus eleifend, ornare diam, montes in vestibulum dolor et egestas.</p>
-            <!-- end content -->
-            <div style="clear: both;"></div>
+        <div class="body">
+            <div id="__content">
+                <!-- content -->
+                <h2>Welcome</h2>
+                <p>Lorem ipsum dolor sit amet, nec hac sit convallis dolores aliquet et, sed vivamus ac pellentesque adipiscing nec, id duis. Sapien a nec, nec at, egestas praesent arcu, sed neque odio fames sit maecenas cras, sit wisi hac ut. Nunc turpis nam tempor egestas libero, id wisi a sollicitudin in ante risus, totam est mauris nullam, dui suspendisse et vestibulum blandit, dictumst duis nibh. Venenatis suspendisse lobortis metus sem, sem sapien convallis ut, scelerisque donec morbi vestibulum. Ipsum sociosqu. Elit et nec. Magnis taciti odio quas sed, nec semper in amet, nunc mollis auctor interdum magna molestie, justo ut nostra ipsum lectus volutpat. Iaculis gravida nec sem tincidunt eu, pulvinar lorem senectus tempus fringilla, risus eleifend, ornare diam, montes in vestibulum dolor et egestas.</p>
+                <a href="img/logo-60.png">This is some text linkage</a>
+                <p>Here is some preformatted text to test out.</p>
+                <pre><code>def myfunc(a, b):
+    l = [i ** a for i in xrange(b * 2)]
+    print b ** a
+    return None</code></pre>
+                <h3>More Information</h3>
+                <p>Lorem ipsum dolor sit amet, nec hac sit convallis dolores aliquet et, sed vivamus ac pellentesque adipiscing nec, id duis. Sapien a nec, nec at, egestas praesent arcu, sed neque odio fames sit maecenas cras, sit wisi hac ut. Nunc turpis nam tempor egestas libero, id wisi a sollicitudin in ante risus, totam est mauris nullam, dui suspendisse et vestibulum blandit, dictumst duis nibh. Venenatis suspendisse lobortis metus sem, sem sapien convallis ut, scelerisque donec morbi vestibulum. Ipsum sociosqu. Elit et nec. Magnis taciti odio quas sed, nec semper in amet, nunc mollis auctor interdum magna molestie, justo ut nostra ipsum lectus volutpat. Iaculis gravida nec sem tincidunt eu, pulvinar lorem senectus tempus fringilla, risus eleifend, ornare diam, montes in vestibulum dolor et egestas.</p>
+                <img src="img/feature02.png" />
+                <p>Lectus quis interdum tincidunt at. Elit voluptate, justo scelerisque pellentesque lacus eget viverra quam. Velit integer dignissim amet libero tristique est, curabitur rutrum lacinia, sociosqu id. Odio in accumsan ultricies in amet. Sed a sed augue, lacus posuere leo aptent, ipsum ut lacus a in purus, pharetra quo vestibulum. Vivamus duis porttitor facilisis in luctus. Suspendisse ligula phasellus vitae, in sed porta sodales, lorem vestibulum nec, velit phasellus. At nam, potenti volutpat in, purus curae vel massa euismod nibh hendrerit. Lacinia nec elit sollicitudin facilisis praesent, nulla risus taciti imperdiet ac. Enim accumsan sem vitae urna.</p>
+                <ul>
+                    <li>This is a list of stuff</li>
+                    <li>It lists awesome things
+                        <ul>
+                            <li>This is a sub-list to check indent</li>
+                            <li>Also awesome stuff here</li>
+                        </ul>
+                    </li>
+                    <li>Another list item</li>
+                </ul>
+                <p>Lorem ipsum dolor sit amet, nec hac sit convallis dolores aliquet et, sed vivamus ac pellentesque adipiscing nec, id duis. Sapien a nec, nec at, egestas praesent arcu, sed neque odio fames sit maecenas cras, sit wisi hac ut. Nunc turpis nam tempor egestas libero, id wisi a sollicitudin in ante risus, totam est mauris nullam, dui suspendisse et vestibulum blandit, dictumst duis nibh. Venenatis suspendisse lobortis metus sem, sem sapien convallis ut, scelerisque donec morbi vestibulum. Ipsum sociosqu. Elit et nec. Magnis taciti odio quas sed, nec semper in amet, nunc mollis auctor interdum magna molestie, justo ut nostra ipsum lectus volutpat. Iaculis gravida nec sem tincidunt eu, pulvinar lorem senectus tempus fringilla, risus eleifend, ornare diam, montes in vestibulum dolor et egestas.</p>
+                <!-- end content -->
+                <div style="clear: both;"></div>
+            </div>
         </div>
         
-        
-        <div id="__gallery" class="body">
-            <h2>Awesome Gallery</h2>
-            <p>Lectus quis interdum tincidunt at. Elit voluptate, justo scelerisque pellentesque lacus.</p>
-            <div class="block">
-                <a href="img/feature01.png"><img src="img/feature01.png" /></a>
+        <div class="body">
+            <div id="__gallery">
+                <h2>Awesome Gallery</h2>
+                <p>Lectus quis interdum tincidunt at. Elit voluptate, justo scelerisque pellentesque lacus.</p>
+                <div class="block">
+                    <a href="img/feature01.png"><img src="img/feature01.png" /></a>
+                </div>
+                <div class="block">
+                    <img src="img/feature02.png" />
+                </div>
+                <div class="block">
+                    <img src="img/feature03.png" />
+                </div>
+                <div class="block">
+                    <img src="img/feature02.png" />
+                </div>
+                <div class="block">
+                    <img src="img/feature01.png" />
+                </div>
+                <div class="block">
+                    <img src="img/feature03.png" />
+                </div>
+                <div class="block">
+                    <img src="img/feature02.png" />
+                </div>
+                <div class="block">
+                    <img src="img/feature01.png" />
+                </div>
+                <div class="block">
+                    <img src="img/feature02.png" />
+                </div>
+                <div class="block">
+                    <img src="img/feature03.png" />
+                </div>
+                <div class="block">
+                    <img src="img/feature02.png" />
+                </div>
+                <div class="block">
+                    <img src="img/feature01.png" />
+                </div>
+                <div class="block">
+                    <img src="img/feature03.png" />
+                </div>
+                <div class="block">
+                    <img src="img/feature02.png" />
+                </div>
+                <div class="block">
+                    <img src="img/feature01.png" />
+                </div>
+                <div style="clear: both;"></div>
             </div>
-            <div class="block">
-                <img src="img/feature02.png" />
-            </div>
-            <div class="block">
-                <img src="img/feature03.png" />
-            </div>
-            <div class="block">
-                <img src="img/feature02.png" />
-            </div>
-            <div class="block">
-                <img src="img/feature01.png" />
-            </div>
-            <div class="block">
-                <img src="img/feature03.png" />
-            </div>
-            <div class="block">
-                <img src="img/feature02.png" />
-            </div>
-            <div class="block">
-                <img src="img/feature01.png" />
-            </div>
-            <div class="block">
-                <img src="img/feature02.png" />
-            </div>
-            <div class="block">
-                <img src="img/feature03.png" />
-            </div>
-            <div class="block">
-                <img src="img/feature02.png" />
-            </div>
-            <div class="block">
-                <img src="img/feature01.png" />
-            </div>
-            <div class="block">
-                <img src="img/feature03.png" />
-            </div>
-            <div class="block">
-                <img src="img/feature02.png" />
-            </div>
-            <div class="block">
-                <img src="img/feature01.png" />
-            </div>
-            <div style="clear: both;"></div>
         </div>
         
 		
