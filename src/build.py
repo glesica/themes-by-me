@@ -1,5 +1,5 @@
 import sys, os
-from jinja2 import Environment, PackageLoader
+from jinja2 import Environment, FileSystemLoader
 
 class LayoutBuilder(object):
     '''
@@ -8,29 +8,21 @@ class LayoutBuilder(object):
     
     def __init__(self):
         self.template_environment = Environment(
-            loader=PackageLoader('nice', 'templates')
+            loader=FileSystemLoader('nice/templates')
         )
+    
+    def buildLayout(self, layoutName):
+        layoutFileName = layoutName
+        if not layoutFileName.endswith('.html'):
+            layoutFileName = layoutFileName + '.html'
 
-    def getSection(name):
-        template_file = name
-        if not name.startswith('section_'):
-            template = 'section_' + template_file
-        if not name.endswith('.html'):
-            template_file = template_file + '.html'
-    
-        t = template_environment.get_template(template_file)
+        layoutPath = os.path.join('layouts', layoutFileName)
+        t = self.template_environment.get_template(layoutPath)
         return t.render()
-    
-    def buildLayout(sections):
-        context = {}
-        
-        for section in sections:
-            context[section] = getSection(section)
-        
-        return 
 
 def main(argv):
-    
+    builder = LayoutBuilder()
+    print builder.buildLayout(argv[0])
 
 if __name__ == '__main__':
     sys.exit(main(sys.argv[1:]))
