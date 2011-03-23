@@ -1,0 +1,677 @@
+@import "bootstrap.less";
+
+/* Variable and mixin definitions */
+
+@page-background: #f9f9f9;
+@body-text: rgb(60,60,60);
+
+
+/*	Less Framework 4
+	http://lessframework.com
+	by Joni Korpi
+	License: http://creativecommons.org/licenses/MIT/	*/
+
+
+/*	Resets
+	------	*/
+
+html, body, div, span, object, iframe, h1, h2, h3, h4, h5, h6, 
+p, blockquote, pre, a, abbr, address, cite, code, del, dfn, em, 
+img, ins, kbd, q, samp, small, strong, sub, sup, var, b, i, hr, 
+dl, dt, dd, ol, ul, li, fieldset, form, label, legend, 
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, figure, figcaption, hgroup, 
+menu, footer, header, nav, section, summary, time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+}
+
+article, aside, canvas, figure, figure img, figcaption, hgroup,
+footer, header, nav, section, audio, video {
+	display: block;
+}
+
+a img {border: 0;}
+
+
+
+/*  Typography presets
+	------------------	*/
+
+.gigantic {
+	font-size: 110px;
+	line-height: 120px;
+	letter-spacing: -2px;
+}
+
+.huge, h1 {
+	font-size: 68px;
+	line-height: 72px;
+	letter-spacing: -1px;
+}
+
+.large, h2 {
+	font-size: 42px;
+	line-height: 48px;
+}
+
+.bigger, h3 {
+	font-size: 26px;
+	line-height: 36px;
+}
+
+.big, h4 {
+	font-size: 22px;
+	line-height: 30px;
+}
+
+body {
+	font: 16px/24px Helvetica, Arial, sans-serif;
+}
+
+.small, small {
+	font-size: 13px;
+	line-height: 18px;
+}
+
+/* Selection colours (easy to forget) */
+
+::selection 	 	{background: rgb(255,255,158);}
+::-moz-selection 	{background: rgb(255,255,158);}
+img::selection 		{background: transparent;}
+img::-moz-selection	{background: transparent;}
+body {-webkit-tap-highlight-color: rgb(255,255,158);}
+
+/*  List presets
+    ------------  */
+
+ol, ul {
+	list-style-position: inside;
+}
+
+
+/*		Default Layout: 992px. 
+		Gutters: 24px.
+		Outer margins: 48px.
+		Leftover space for scrollbars @1024px: 32px.
+-------------------------------------------------------------------------------
+cols    1     2      3      4      5      6      7      8      9      10
+px      68    160    252    344    436    528    620    712    804    896    */
+
+body {
+    padding: 72px 0 0;
+    background: @page-background;
+	color: @body-text;
+	-webkit-text-size-adjust: 100%; /* Stops Mobile Safari from auto-adjusting font-sizes */
+}
+
+/* HEADER AREA */
+
+#__header {
+    .box-shadow(2px 2px 5px #aaa);
+    .border-radius(3px);
+}
+
+/* SITE MENU */
+
+#__site-menu {
+    #gradient > .vertical(#666, #333);
+    
+    .border-radius(3px);
+    
+    padding: 0 12px;
+}
+
+#__site-menu * {
+    display: inline;
+    line-height: 60px;
+}
+
+#__site-menu h1 {
+    /*background: url('img/logo-24.png') no-repeat;
+    padding: 0 0 0 36px; Toggle these two settings to turn the logo image on or off */
+
+    text-shadow: 0 -1px 1px rgba(0,0,0,0.5);
+    -moz-text-shadow: 0 -1px 1px rgba(0,0,0,0.5);
+    -webkit-text-shadow: 0 -1px 1px rgba(0,0,0,0.5);
+
+    font-size: 20px;
+    color: #ccc;
+}
+
+#__site-menu li {
+    list-style-type: none;
+}
+
+#__site-menu li a {
+    #gradient > .vertical(#666, #333);
+    
+    
+    text-shadow: 0 -1px 1px rgba(0,0,0,0.5);
+    -moz-text-shadow:0 -1px 1px rgba(0,0,0,0.5);
+    -webkit-text-shadow:0 -1px 1px rgba(0,0,0,0.5);
+    
+    padding: 0 10px;
+    height: 60px;
+    
+    border-left: 1px solid rgba(255,255,255,0.10);
+    border-right: 1px solid rgba(0,0,0,0.17);
+    
+    display: block;
+    float: right;
+    
+    color: #ccc;
+}
+
+#__site-menu li a:hover {
+    background: #333;
+}
+
+#__site-menu li a.active {
+    #gradient > .vertical(#3b6b9c, #194e84);
+}
+
+#__alt-site-menu {
+    display: none;
+}
+
+/* PAGE MENU */
+
+#__page-menu {
+	background: #ddd;
+	
+	.border-radius(3px);
+	
+    padding: 12px;
+    margin-top: 12px;
+}
+
+#__page-menu li {
+    display: inline;
+    list-style-type: none;
+}
+
+#__page-menu li a {
+    color: #333;
+    
+    padding: 0 10px;
+    
+    border-left: 1px solid #333;
+}
+
+#__page-menu li:first-child a {
+	border-left: none;
+}
+
+#__page-menu li a:hover {
+    text-decoration: none;
+}
+
+/* FEATURE CONTENT AREA */
+
+#__feature {
+    position: relative;
+    overflow: hidden;
+    margin-top: 24px;
+    line-height: 0;
+}
+
+#__feature img {
+	max-width: 100%;
+	max-height: 504px;
+}
+
+#__feature .content {
+ 	background: rgba(0,0,0,0.5);
+	color: #ccc;
+	padding: 24px;
+	position: absolute;
+	left: 0;
+	top: 0;
+	line-height: 24px;
+}
+
+/* SUB-FEATURE CONTENT AREA */
+
+#__sub-feature {
+	margin-top: 24px;
+}
+
+#__sub-feature .block {
+	float: left;
+	width: 436px;
+	margin-left: 24px;
+}
+
+#__sub-feature .block:first-child {
+	margin-left: 0;
+}
+
+#__sub-feature .block img {
+	max-width: 436px;
+}
+
+/* CONTENT AREA */
+
+#__content {
+    font-family: 'Lato', arial, serif;
+    margin-top: 12px;
+}
+
+/* PHOTO GALLERY */
+
+#__gallery {
+	margin-top: 24px;
+}
+
+#__gallery .block {
+	width: 160px;
+	padding: 8px;
+	margin: 0 auto 4px auto;
+	display: inline-block;
+	overflow: hidden;
+	line-height: 0;
+    background: #eee;
+}
+
+#__gallery .block img {
+	max-width: 160px;
+	margin: 0;
+}
+
+/* INTERFACE ELEMENTS */
+
+#__int-toggle-site-menu, #__int-toggle-page-menu {
+    display: none;
+}
+
+/* FOOTER */
+
+#__footer {
+    background: #ddd;
+    
+    width: 100%;
+    
+    padding: 24px 0 24px 0;
+    margin-top: 24px;
+
+    border-top: 1px dotted #333;
+}
+
+#__footer .block {
+    margin-left: 24px;
+    
+    width: 344px;
+    
+    float: left;
+}
+
+#__footer .block h3 {
+    color: #333;
+
+    text-shadow: 0 -1px 1px rgba(0,0,0,0.5);
+    -moz-text-shadow: 0 -1px 1px rgba(0,0,0,0.5);
+    -webkit-text-shadow: 0 -1px 1px rgba(0,0,0,0.5);
+}
+
+#__footer .block:first-child {
+    margin-left: 0;
+    
+    width: 252px;
+}
+
+#__footer .block:last-child {
+    width: 252px;
+}
+
+/* COPYRIGHT NOTICE */
+
+#__copyright p:first-child {
+	padding-top: 24px;
+}
+
+#__copyright:first-child p:first-child {
+	padding-top: 0;
+}
+
+#__copyright p {
+    text-align: center;
+}
+
+/*		Tablet Layout: 768px.
+		Gutters: 24px.
+		Outer margins: 28px.
+		Inherits styles from: Default Layout.
+-----------------------------------------------------------------
+cols    1     2      3      4      5      6      7      8
+px      68    160    252    344    436    528    620    712    */
+
+@media only screen and (min-width: 768px) and (max-width: 991px) {
+	
+	body {
+	    padding: 48px 0 0;
+	}
+	
+	.body {
+		width: 712px;
+		padding: 0 28px;
+	}
+	
+	#__feature {
+		height: 400px;
+	}
+	
+	/* SUB-FEATURE CONTENT AREA */
+
+	#__sub-feature .block {
+		width: 344px;
+	}
+	
+	#__sub-feature .block img {
+		max-width: 344px;
+	}
+	
+	/* PHOTO GALLERY */
+	
+	#__gallery .block {
+		width: 159px;
+	}
+	
+	#__gallery .block img {
+		max-width: 159px;
+	}
+
+    /* FOOTER */
+    
+    #__footer .block {
+        width: 344px;
+    }
+    
+    #__footer .block:first-child {
+        width: 160px;
+    }
+    
+    #__footer .block:last-child {
+        width: 160px;
+    }
+
+}
+
+
+
+/*		Mobile Layout: 320px.
+		Gutters: 24px.
+		Outer margins: 34px.
+		Inherits styles from: Default Layout.
+---------------------------------------------
+cols    1     2      3
+px      68    160    252    */
+
+@media only screen and (max-width: 767px) {
+	
+	body {
+	    padding: 48px 0 0;
+	}
+	
+	.body {
+		width: 252px;
+		padding: 0 34px;
+	}
+	
+	/* HEADER AREA */
+	
+	#__banner {
+        display: none;
+    }
+    
+    /* SITE MENU */
+    
+    #__site-menu {
+        padding: 0; /* UPDATED */
+    }
+
+    #__site-menu * {
+        display: block; /* UPDATED */
+    }
+
+    #__site-menu h1 {
+        margin: auto 12px; /* ADDED */
+        display: inline; /* ADDED */
+    }
+    
+    #__site-menu ul {
+        display: none; /* ADDED */
+    }
+
+    #__site-menu li a {
+        #gradient > .vertical(#666, #555);
+        
+        height: auto; /* UPDATED */
+        line-height: 36px; /* ADDED */
+
+        float: none; /* UPDATED */
+    }
+    
+    #__site-menu li:last-child a {
+        .border-radius(0, 0, 6px, 6px);
+    }
+
+    #__site-menu li a:hover {
+        #gradient > .vertical(#3b6b9c, #194e84);
+    }
+    
+    /* PAGE MENU */
+    
+    #__page-menu {
+        .box-shadow(2px -1px 4px #aaa);
+
+        .border-radius(6px);
+        
+        padding: 0; /* UPDATED */
+        margin: 12px auto; /* ADDED */
+    }
+    
+    #__page-menu * {
+        display: block; /* ADDED */
+    }
+
+    #__page-menu ul {
+        display: none; /* ADDED */
+    }
+
+    #__page-menu li {
+        display: block; /* UPDATED */
+    }
+
+    #__page-menu li a {
+        #gradient > .vertical(#666, #555);
+        
+        .box-shadow(none);
+        
+        text-shadow: 0 -1px 1px rgba(0,0,0,0.5); /* ADDED */
+        -moz-text-shadow:0 -1px 1px rgba(0,0,0,0.5); /* ADDED */
+        -webkit-text-shadow:0 -1px 1px rgba(0,0,0,0.5); /* ADDED */
+
+        .border-radius(0);
+        
+        line-height: 36px; /* ADDED */
+        color: #ccc; /* ADDED */
+    }
+    
+    #__page-menu li:last-child a {
+        .border-radius(0, 0, 3px, 3px);
+    }
+
+    #__page-menu li a:hover {
+        #gradient > .vertical(#3b6b9c, #194e84);
+        
+        text-decoration: underline; /* ADDED */
+    }
+    
+    /* FEATURE CONTENT AREA */
+    
+    #__feature {
+        display: none;
+    }
+    
+    /* SUB-FEATURE CONTENT AREA */
+
+	#__sub-feature {
+		margin-top: 24px;
+	}
+	
+	#__sub-feature .block {
+		width: 100%;
+		float: none;
+		margin-left: 0;
+	}
+	
+	#__sub-feature .block:first-child {
+		margin-bottom: 24px;
+	}
+	
+	#__sub-feature .block img {
+		max-width: 100%;
+	}
+	
+	/* PHOTO GALLERY */
+	
+	#__gallery .block {
+		width: 236px;
+	}
+	
+	#__gallery .block img {
+		max-width: 236px;
+	}
+    
+    /* INTERFACE ELEMENTS */
+
+    #__int-toggle-site-menu {
+        background: #333;
+        
+        padding: 0 10px;
+        height: auto; /* UPDATED */
+        line-height: 36px; /* ADDED */
+        
+        border-left: 1px solid rgba(255,255,255,0.10);
+        border-right: 1px solid rgba(0,0,0,0.17);
+        
+        display: block;
+        float: none; /* UPDATED */
+        
+        color: #ccc;
+        cursor: pointer;
+        text-decoration: underline;
+    }
+    
+    #__int-toggle-site-menu.active {
+        
+    }
+    
+    #__int-toggle-site-menu.inactive {
+        .border-radius(0, 0, 3px, 3px);
+    }
+    
+    #__int-toggle-site-menu:hover {
+        #gradient > .vertical(#3b6b9c, #194e84);
+    }
+
+    #__int-toggle-page-menu {
+        background: #333;
+
+        .border-radius(3px, 3px, 0, 0);
+        
+        padding: 0 10px;
+        height: auto; /* UPDATED */
+        line-height: 36px; /* ADDED */
+        
+        border-left: 1px solid rgba(255,255,255,0.10);
+        border-right: 1px solid rgba(0,0,0,0.17);
+        
+        display: block;
+        float: none; /* UPDATED */
+        
+        color: #ccc;
+        cursor: pointer;
+        text-decoration: underline;
+    }
+    
+    #__int-toggle-page-menu.active {
+        .border-radius(0);
+    }
+    
+    #__int-toggle-page-menu.inactive {
+        .border-radius(3px);
+    }
+    
+    #__int-toggle-page-menu:hover {
+        #gradient > .vertical(#3b6b9c, #194e84);
+    }
+    
+    /* FOOTER */
+    
+    #__footer .block {
+        margin: 0 0 24px 0;
+        width: 252px;
+    }
+    
+    #__footer .block:first-child {
+        width: 252px;
+    }
+    
+    #__footer .block:last-child {
+        margin: 0;
+        width: 252px;
+    }
+	
+}
+
+
+
+/*		Wide Mobile Layout: 480px.
+		Gutters: 24px.
+		Outer margins: 22px.
+		Inherits styles from: Default Layout, Mobile Layout.
+------------------------------------------------------------
+cols    1     2      3      4      5
+px      68    160    252    344    436    */
+
+@media only screen and (min-width: 480px) and (max-width: 767px) {
+	
+	body {
+	    padding: 36px 0 0;
+	}
+	
+	.body {
+		width: 436px;
+		padding: 0 22px;
+	}
+	
+	/* PHOTO GALLERY */
+	
+	#__gallery .block {
+		width: 420px;
+	}
+	
+	#__gallery .block img {
+		max-width: 420px;
+	}
+	
+	/* FOOTER */
+    
+    #__footer .block {
+        margin: 0 0 24px 0;
+        width: 436px;
+    }
+    
+    #__footer .block:first-child {
+        width: 436px;
+    }
+    
+    #__footer .block:last-child {
+        margin: 0;
+        width: 436px;
+    }
+	
+}
