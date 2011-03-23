@@ -198,8 +198,6 @@ body {
 	
     padding: 12px;
     margin-top: 12px;
-    
-    /*display: none;  Toggle to show or hide the page menu */
 }
 
 #__page-menu li {
@@ -230,7 +228,6 @@ body {
     overflow: hidden;
     margin-top: 24px;
     line-height: 0;
-    /*display: none;  Toggle to show or hide the feature area */
 }
 
 #__feature img {
@@ -252,7 +249,6 @@ body {
 
 #__sub-feature {
 	margin-top: 24px;
-	/*display: none;  Toggle to show or hide the main sub-feature area */
 }
 
 #__sub-feature .block {
@@ -274,15 +270,12 @@ body {
 #__content {
     font-family: 'Lato', arial, serif;
     margin-top: 12px;
-    
-    /*display: none;  Toggle to show or hide the main content area */
 }
 
 /* PHOTO GALLERY */
 
 #__gallery {
 	margin-top: 24px;
-	/*display: none;  Toggle to show or hide the main gallery area */
 }
 
 #__gallery .block {
@@ -297,6 +290,7 @@ body {
 
 #__gallery .block img {
 	max-width: 160px;
+	margin: 0;
 }
 
 /* INTERFACE ELEMENTS */
