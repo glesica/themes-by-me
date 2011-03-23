@@ -1,6 +1,8 @@
 import sys, os
 from jinja2 import Environment, FileSystemLoader
 
+SRC_PATH = '.'
+
 class LayoutBuilder(object):
     '''
     Handles building a full layout
@@ -16,7 +18,7 @@ class LayoutBuilder(object):
         if not layoutFileName.endswith('.html'):
             layoutFileName = layoutFileName + '.html'
 
-        layoutPath = os.path.join('layouts', layoutFileName)
+        layoutPath = os.path.join(SRC_PATH, 'layouts', layoutFileName)
         t = self.template_environment.get_template(layoutPath)
         return t.render()
 
