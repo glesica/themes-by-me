@@ -26,6 +26,17 @@ class LayoutBuilder(object):
         t = self.template_environment.get_template(layoutPath)
         return t.render()
     
+    def buildAll(self, path='../'):
+        '''
+        Builds all available layouts and saves them to the specified path.
+        '''
+        for layout in self.getLayouts():
+            rendered = self.buildLayout(layout)
+            
+            f = open(os.path.join(path, layout), 'w')
+            f.write(rendered)
+            f.close()
+    
     def getLayouts(self):
         '''
         Get a list of available layouts and return as a list, stripping file 
@@ -42,8 +53,13 @@ def printHelp():
 build.py - Assembles various layouts based on a given template.
 
 Usage:
-    build.py list - Lists available layouts (see docs)
-    build.py build <layout> - Outputs the given layout to stdout
+    build.py <command> <arguments>
+
+Commands:
+    help - Print this help and quit
+    list - Lists available layouts (see docs)
+    build <layout> - Outputs rendered <layout> to stdout
+    buildall <path> - Build all available layouts and save to <path>
 '''
 
 def main(argv):
@@ -55,8 +71,15 @@ def main(argv):
 
     command = argv[0]
     
-    if command == 'build':
+    if command == 'help':
+        printHelp()
+    elif command == 'build':
         print builder.buildLayout(argv[1])
+    elif command == 'buildall':
+        if len(argv) == 2:
+            builder.buildAll(argv[0])
+        else:
+            builder.buildAll()
     elif command == 'list':
         print '\n'.join(builder.getLayouts())
     
