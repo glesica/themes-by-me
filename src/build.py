@@ -34,7 +34,7 @@ class LayoutBuilder(object):
         layouts = []
         for cd, d, f in os.walk(os.path.join(self.template_path, 'layouts')):
             for filename in f:
-                layouts.append(filename.strip('.html'))
+                layouts.append(filename)
         return layouts
 
 def printHelp():
