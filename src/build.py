@@ -8,11 +8,11 @@ class LayoutBuilder(object):
     Handles building a full layout
     '''
     
-    def __init__(self, template_path):
+    def __init__(self, theme):
         self.template_environment = Environment(
-            loader=FileSystemLoader(template_path)
+            loader=FileSystemLoader(theme)
         )
-        self.template_path = template_path
+        self.theme = theme
     
     def buildLayout(self, layoutName):
         '''
@@ -43,29 +43,28 @@ class LayoutBuilder(object):
         extensions.
         '''
         layouts = []
-        for cd, d, f in os.walk(os.path.join(self.template_path, 'layouts')):
+        for cd, d, f in os.walk(os.path.join(self.theme, 'layouts')):
             for filename in f:
                 layouts.append(filename)
         return layouts
 
 def printHelp():
     print '''
-build.py - Assembles various layouts based on a given template.
+build.py - Assembles various layouts based on a given theme.
 
 Usage:
-    build.py <command> <arguments>
+    build.py <command> <theme> [arguments]
 
 Commands:
     help - Print this help and quit
-    list - Lists available layouts (see docs)
-    build <layout> - Outputs rendered <layout> to stdout
-    buildall <path> - Build all available layouts and save to <path>
+    list <theme> - Lists available layouts (see docs)
+    build <theme> <layout> - Outputs rendered <layout> to stdout
+    buildall <theme> <path> - Build all available layouts and save to <path>
 '''
 
 def main(argv):
-    builder = LayoutBuilder('nice/templates')
-    
-    if len(argv) == 0:
+    if len(argv) < 1:
+        print 'Not enough arguments.'
         printHelp()
         return 1
 
@@ -73,11 +72,15 @@ def main(argv):
     
     if command == 'help':
         printHelp()
-    elif command == 'build':
-        print builder.buildLayout(argv[1])
+        return 0
+        
+    builder = LayoutBuilder(argv[1])
+    
+    if command == 'build':
+        print builder.buildLayout(argv[2])
     elif command == 'buildall':
-        if len(argv) == 2:
-            builder.buildAll(argv[0])
+        if len(argv) == 3:
+            builder.buildAll(argv[2])
         else:
             builder.buildAll()
     elif command == 'list':
